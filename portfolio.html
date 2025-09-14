@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamatchi G - AI Developer Portfolio</title>
+    <meta name="description" content="Kamatchi G's professional portfolio showcasing projects in AI, Machine Learning, and software development.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000a12;
+            color: #f0f4f8;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .text-blue {
+            color: #003366;
+        }
+        .text-gold {
+            color: #FFD700;
+        }
+        .bg-blue {
+            background-color: #003366;
+        }
+        .bg-gold {
+            background-color: #FFD700;
+        }
+        .card-bg {
+            background-color: #121f2c;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Styles to protect the image */
+        .protected-image {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-[#000a12] shadow-lg fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gold hover:text-white transition duration-300">Kamatchi G</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-white hover:text-gold transition duration-300">About</a>
+                <a href="#experience" class="text-white hover:text-gold transition duration-300">Experience</a>
+                <a href="#academics" class="text-white hover:text-gold transition duration-300">Academics</a>
+                <a href="#skills" class="text-white hover:text-gold transition duration-300">Skills</a>
+                <a href="#projects" class="text-white hover:text-gold transition duration-300">Projects</a>
+                <a href="#contact" class="text-white hover:text-gold transition duration-300">Contact</a>
+                <a href="https://github.com/KAMATCHIGUNASEKARAN18" target="_blank" class="text-white hover:text-gold transition duration-300">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#000a12]">
+            <div class="px-2 pt-2 pb-3 space-y-1 text-center">
+                <a href="#about" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">About</a>
+                <a href="#experience" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">Experience</a>
+                <a href="#academics" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">Academics</a>
+                <a href="#skills" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">Skills</a>
+                <a href="#projects" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#contact" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">Contact</a>
+                <a href="https://github.com/KAMATCHIGUNASEKARAN18" target="_blank" class="block text-white hover:bg-gray-700 hover:text-gold rounded-md px-3 py-2 text-base font-medium">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="section-padding flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen">
+            <div class="flex-1 p-4 animate-fade-in md:px-12 lg:px-24">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+                    Hi, I'm <br class="hidden sm:block"><span class="text-gold">Kamatchi Gunasekaran</span>.
+                </h1>
+                <p id="typing-text" class="text-lg sm:text-xl lg:text-2xl text-white mb-8"></p>
+                <p class="text-base sm:text-lg text-gray-400 mb-8 max-w-2xl mx-auto md:mx-0">
+                    Results-driven technology professional with strong foundations in programming, data handling, and software development. Skilled in designing efficient solutions, analyzing data, and building intelligent applications. Eager to contribute to innovative projects by applying problem-solving skills, adaptability, and a passion for continuous learning.
+                </p>
+                <a href="#contact" class="bg-gold text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+                    Connect With Me
+                </a>
+            </div>
+            <div class="flex-1 p-4 flex justify-center mt-8 md:mt-0 animate-fade-in delay-200 md:px-12 lg:px-24">
+                <!--
+                TO MAKE YOUR PHOTO APPEAR:
+                1. Upload your photo to a service like GitHub or Imgur to get a public link.
+                2. Replace the placeholder URL below with the public link to your image.
+                -->
+                <img src="C:\Users\benmo\Downloads\WhatsApp Image 2025-09-14 at 9.38.21 PM.jpeg" alt="Kamatchi G Profile Photo" class="w-64 h-64 sm:w-80 sm:h-80 rounded-full shadow-2xl border-4 border-gold object-cover protected-image" oncontextmenu="return false;" ondragstart="return false;">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding card-bg rounded-3xl mx-4 my-8 md:mx-auto animate-slide-up">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 inline-block pb-1 border-b-2 border-gold">About Me</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mt-6 max-w-4xl mx-auto">
+                    I am a passionate AI developer dedicated to transforming ideas into smart, real-time solutions.
+                    Skilled in Python, Java, and SQL, I design scalable, ethical AI products.
+                    My projects include AI-powered women’s safety systems, predictive healthcare models, and interactive games.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 inline-block pb-1 border-b-2 border-gold w-full">Work Experience</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up col-span-1 md:col-span-2">
+                        <h3 class="font-bold text-gold text-2xl mb-2">Virtual Intern</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Infosys Springboard | Virtual | Currently Attending</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Actively participating in the Infosys Springboards 6.0 virtual internship program, Batch 3.</li>
+                            <li>Gaining practical skills in various technologies through hands-on modules and project-based learning.</li>
+                            <li>Collaborating with peers and mentors in a virtual environment to build and deploy solutions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academics Section -->
+        <section id="academics" class="section-padding">
+            <div class="container">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 inline-block pb-1 border-b-2 border-gold w-full">Academics & Certifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up">
+                        <h3 class="font-bold text-gold text-2xl mb-4"><i class="fas fa-graduation-cap mr-2"></i>Education</h3>
+                        <ul class="text-gray-300 space-y-4">
+                            <li>
+                                <span class="font-semibold text-lg">B.Tech in Information Technology</span><br>
+                                <span class="text-sm">Coimbatore Institute of Engineering and Technology (CIET)</span><br>
+                                <span class="text-sm">Expected Graduation: May 2026 | Overall CGPA: 8.49</span>
+                            </li>
+                            <li>
+                                <span class="font-semibold text-lg">HSC</span><br>
+                                <span class="text-sm">Aruthraa Vidyalaya, PBLR.</span><br>
+                                <span class="text-sm">84.5%</span>
+                            </li>
+                            <li>
+                                <span class="font-semibold text-lg">SSLC</span><br>
+                                <span class="text-sm">Aruthraa Vidyalaya, PBLR.</span><br>
+                                <span class="text-sm">93.8%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Certifications & Awards -->
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up delay-100">
+                        <h3 class="font-bold text-gold text-2xl mb-4"><i class="fas fa-certificate mr-2"></i>Certifications & Awards</h3>
+                        <ul class="text-gray-300 space-y-4">
+                            <li><span class="font-semibold">Programming in Java</span> - NPTEL</li>
+                            <li><span class="font-semibold">AI Foundation Certificate</span> - Infosys Springboard</li>
+                            <li><span class="font-semibold">Python, Java and HTML levelUp program</span> - Digilabs</li>
+                            <li>Attended 7 days of NSS Camp and got a Certificate</li>
+                            <li>Got 1st prize in "beyond the frame" National level symposium conducted by Hindustan College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 inline-block pb-1 border-b-2 border-gold w-full">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Languages & Technologies -->
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up">
+                        <h3 class="font-bold text-gold text-2xl mb-4"><i class="fas fa-code mr-2"></i>Languages & Technologies</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Python</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Java</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">HTML</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">CSS</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">JavaScript</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">MySQL</span>
+                        </div>
+                    </div>
+                    <!-- Tools -->
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up delay-100">
+                        <h3 class="font-bold text-gold text-2xl mb-4"><i class="fas fa-toolbox mr-2"></i>Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">VS Code</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Canva</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">MS Word</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Excel</span>
+                        </div>
+                    </div>
+                    <!-- Interests -->
+                    <div class="card-bg rounded-2xl p-6 shadow-xl transform transition-all duration-300 hover:scale-105 animate-slide-up delay-200">
+                        <h3 class="font-bold text-gold text-2xl mb-4"><i class="fas fa-brain mr-2"></i>Interests</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Artificial Intelligence</span>
+                            <span class="bg-blue text-white px-4 py-2 rounded-full font-semibold text-sm">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-[#000a12]">
+            <div class="container">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 inline-block pb-1 border-b-2 border-gold w-full">Projects</h2>
+                
+                <!-- Completed Projects -->
+                <h3 class="text-2xl sm:text-3xl font-bold text-gold text-center mb-6">Completed Projects</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- AI Powered Women’s Safety System -->
+                    <div class="card-bg rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 animate-slide-up">
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gold mb-2">AI Powered Women’s Safety System</h4>
+                            <div class="text-sm text-gray-400 mb-4 space-y-2">
+                                <p><strong>The Challenge:</strong> To build a reliable and autonomous safety system for women that can detect distress and respond without manual input.</p>
+                                <p><strong>The Solution:</strong> Developed an AI-powered system that uses voice and background sound analysis to detect distress signals. The system then automatically triggers an SOS response, including sending GPS location and making a fake police call to deter attackers, for enhanced security.</p>
+                                <p><strong>Technologies Used:</strong> Python, AI/ML models, GPS integration.</p>
+                            </div>
+                            <a href="https://github.com/KAMATCHIGUNASEKARAN18/women" target="_blank" class="inline-block bg-blue text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-sky-700 transition duration-300">
+                                View on GitHub <i class="fab fa-github ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fetal Health Prediction using Hybrid ML and Python -->
+                    <div class="card-bg rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 animate-slide-up delay-100">
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gold mb-2">Fetal Health Prediction using Hybrid ML and Python</h4>
+                            <div class="text-sm text-gray-400 mb-4 space-y-2">
+                                <p><strong>The Challenge:</strong> To accurately classify fetal health status from complex Cardiotocography (CTG) data to assist healthcare professionals in making timely decisions.</p>
+                                <p><strong>The Solution:</strong> Built a hybrid machine learning model combining the strengths of SVM and XGBoost. The model achieved an impressive **97.60% accuracy** in classifying fetal health into normal, suspect, and pathological states. We also used SHAP (SHapley Additive exPlanations) to provide model interpretability, which is critical for trust and adoption in healthcare.</p>
+                                <p><strong>Technologies Used:</strong> Python, Scikit-learn, XGBoost, SHAP, Data Analysis.</p>
+                            </div>
+                            <a href="https://github.com/KAMATCHIGUNASEKARAN18/fetal" target="_blank" class="inline-block bg-blue text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-sky-700 transition duration-300">
+                                View on GitHub <i class="fab fa-github ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hangman Game -->
+                    <div class="card-bg rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 animate-slide-up delay-200">
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gold mb-2">Hangman Game</h4>
+                            <div class="text-sm text-gray-400 mb-4 space-y-2">
+                                <p><strong>The Challenge:</strong> To create a fun and engaging interactive application that demonstrates fundamental programming concepts and logic.</p>
+                                <p><strong>The Solution:</strong> Developed a command-line Hangman game in Python. The game features interactive gameplay, a wide range of words, and clear feedback to the user, making it an excellent example of a practical and well-structured program.</p>
+                                <p><strong>Technologies Used:</strong> Python</p>
+                            </div>
+                            <a href="#" target="_blank" class="inline-block bg-blue text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-sky-700 transition duration-300">
+                                View on GitHub <i class="fab fa-github ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Student Research Paper Verification & Portfolio System -->
+                    <div class="card-bg rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 animate-slide-up">
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold text-gold mb-2">Student Research Paper Verification & Portfolio System</h4>
+                            <div class="text-sm text-gray-400 mb-4 space-y-2">
+                                <p><strong>The Challenge:</strong> To create a centralized, secure platform for students to submit research papers and for faculty to verify them, while also building a dynamic personal portfolio.</p>
+                                <p><strong>The Solution:</strong> Built a full-stack web application with secure student login and data storage using MongoDB. The system includes a robust workflow for research paper submissions, where faculty can approve or reject papers with specific remarks. A dynamic student portfolio section was also designed to showcase skills, projects, and verified research papers.</p>
+                                <p><strong>Technologies Used:</strong> MongoDB, Express/Flask, Node.js/Python, HTML/CSS/React.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Currently Undergoing Project -->
+                <div class="mt-12">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gold text-center mb-6">Currently Undergoing Project</h3>
+                    <div class="card-bg rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 animate-slide-up">
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-2">AI Handwriting Generation System ✍️</h4>
+                            <div class="text-sm text-gray-400 mb-4 space-y-2">
+                                <p><strong>The Challenge:</strong> To create a system that can learn a user's unique handwriting style from a single image and generate new content in that style from typed text.</p>
+                                <p><strong>The Solution:</strong> I am developing a full-stack AI system using Python and TensorFlow. The core of the system is a Conditional Variational Autoencoder (CVAE) that encodes handwriting style into a latent vector. A text encoder then guides the model to generate the desired text, which can be exported as a high-quality PDF or image file. The front-end, built with Streamlit, provides a simple interface for users to upload samples and generate text.</p>
+                                <p><strong>Technologies Used:</strong> Python, TensorFlow, Streamlit, HTML/CSS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12 inline-block pb-1 border-b-2 border-gold w-full">Contact Me</h2>
+                <p class="text-lg text-gray-300 mb-6 max-w-xl mx-auto">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out to me!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <a href="mailto:kamatchigunasekaran18@gmail.com" class="text-gray-300 hover:text-gold transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> kamatchigunasekaran18@gmail.com
+                    </a>
+                    <a href="tel:9087826552" class="text-gray-300 hover:text-gold transition duration-300">
+                        <i class="fas fa-phone-alt mr-2"></i> 9087826552
+                    </a>
+                    <a href="https://www.linkedin.com/in/kamatchi-gunasekaran-a13822312" target="_blank" class="text-gray-300 hover:text-gold transition duration-300">
+                        <i class="fab fa-linkedin mr-2"></i> View LinkedIn Profile
+                    </a>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-bold text-gold mb-4">Coding Profiles</h3>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <a href="https://leetcode.com/u/NfWRaHv6be/" target="_blank" class="text-gray-300 hover:text-gold transition duration-300">
+                            <i class="fas fa-laptop-code mr-2"></i> LeetCode Profile
+                        </a>
+                        <a href="https://github.com/KAMATCHIGUNASEKARAN18" target="_blank" class="text-gray-300 hover:text-gold transition duration-300">
+                            <i class="fab fa-github mr-2"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#000a12] text-center text-gray-400 py-6">
+        <p>&copy; <span id="current-year"></span> Kamatchi G. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Set current year in footer
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+
+            // Typing animation
+            const typingText = document.getElementById('typing-text');
+            const phrases = [
+                "Creative & Focused AI Developer",
+                "Passionate about building AI solutions",
+                "Turning ideas into smart applications"
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                if (!typingText) return;
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    typingText.textContent = currentPhrase.substring(0, charIndex--);
+                } else {
+                    typingText.textContent = currentPhrase.substring(0, charIndex++);
+                }
+
+                if (!isDeleting && charIndex > currentPhrase.length) {
+                    setTimeout(() => isDeleting = true, 1500);
+                } else if (isDeleting && charIndex < 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+                
+                const speed = isDeleting ? 50 : 100;
+                setTimeout(type, speed);
+            }
+
+            type();
+        });
+    </script>
+</body>
+</html>
